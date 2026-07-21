@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/26KATA/1.0"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/26KATA/1.0">
+   <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+           schemaLocation="form_xsd_metaschema.xsd"/>
+   <element name="Doc_26KATA"
+            type="tns:Doc_26KATA_Type"
+            meta:metaType="DocMetaType">
+      <annotation>
+         <documentation>Nyilatkozat és bevallás kisadózó vállalkozók részére a 2026. évre</documentation>
+      </annotation>
+   </element>
+   <simpleType name="Enum_26KATA_0A0001D005A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="H"/>
+         <enumeration value="E"/>
+         <enumeration value="L"/>
+         <enumeration value="S"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_26KATA_0A0001D004A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="H"/>
+         <enumeration value="O"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_26KATA_0A0001D006A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="1"/>
+         <enumeration value="2"/>
+         <enumeration value="3"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_26KATA_0A0001D003A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="0"/>
+         <enumeration value="1"/>
+         <enumeration value="2"/>
+         <enumeration value="3"/>
+         <enumeration value="4"/>
+         <enumeration value="5"/>
+         <enumeration value="6"/>
+         <enumeration value="7"/>
+         <enumeration value="8"/>
+         <enumeration value="9"/>
+         <enumeration value="10"/>
+         <enumeration value="11"/>
+         <enumeration value="12"/>
+      </restriction>
+   </simpleType>
+   <complexType name="Doc_26KATA_Type">
+      <annotation>
+         <documentation>A teljes bizonylat szerkezetet leíró típus</documentation>
+      </annotation>
+      <sequence>
+         <element name="Form_26KATA"
+                  type="tns:Form_26KATA_Type"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  meta:metaType="FormMetaType">
+            <annotation>
+               <documentation>26KATA részbizonylat</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Form_26KATA_Type">
+      <annotation>
+         <documentation>A teljes nyomtatvány 26KATA részbiztonylatának szerkezetét leíró típus.</documentation>
+      </annotation>
+      <sequence>
+         <element name="Block_120051"
+                  type="tns:Block_26KATA_120051_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>AZONOSÍTÓ ADATOK</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120073"
+                  type="tns:Block_26KATA_120073_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>[ADO] Bevallás a kisadózó vállalkozó 40 százalékos mértékű adójáról</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120175"
+                  type="tns:Block_26KATA_120175_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>ÖNELLENŐRZÉS</documentation>
+            </annotation>
+         </element>
+         <element name="Block_Other"
+                  type="tns:Block_26KATA_Other_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Menüben nem szereplő mezőcsoportokat tartalmazó Block.</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Block_26KATA_120051_Type">
+      <annotation>
+         <documentation>AZONOSÍTÓ ADATOK</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120054"
+                  type="tns:FieldGroup_26KATA_120054_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Adózó adatai</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120072"
+                  type="tns:FieldGroup_26KATA_120072_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Ügyintéző adatai</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120064"
+                  type="tns:FieldGroup_26KATA_120064_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Bevallás jellemzői</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_26KATA_120073_Type">
+      <annotation>
+         <documentation>[ADO] Bevallás a kisadózó vállalkozó 40 százalékos mértékű adójáról</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120074"
+                  type="tns:FieldGroup_26KATA_120074_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Bevallás a kisadózó vállalkozó 40 százalékos mértékű adójáról</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_26KATA_120175_Type">
+      <annotation>
+         <documentation>ÖNELLENŐRZÉS</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120186"
+                  type="tns:FieldGroup_26KATA_120186_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Bevallás jellege</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120149"
+                  type="tns:FieldGroup_26KATA_120149_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>[ONELL] ÖNELLENŐRZÉSI MELLÉKLET</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_26KATA_Other_Type">
+      <annotation>
+         <documentation>Menüben nem szereplő mezőcsoportokat tartalmazó Block típus.</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120189"
+                  type="tns:FieldGroup_26KATA_120189_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Egyenleg</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_26KATA_120054_Type">
+      <annotation>
+         <documentation>Adózó adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adózó adószáma (adózó_adószám)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adózó adóazonosító jele (adózó_adóazonosító_jele)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jogelőd adószáma (jogelőd_adószám)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adózó neve (adózó_név)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_26KATA_120072_Type">
+      <annotation>
+         <documentation>Ügyintéző adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C006A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Neve (ügyintéző_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C007A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Telefonszáma (ügyintéző_telefon)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_26KATA_120064_Type">
+      <annotation>
+         <documentation>Bevallás jellemzői</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Hibásnak minősített nyilatkozat/ bevallás vonalkódja (vonalkód)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001D001A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bevallási időszak ¦ Kezdete (bevtól)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001D002A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bevallási időszak ¦ Vége (bevig)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001D004A"
+                  minOccurs="0"
+                  type="tns:Enum_26KATA_0A0001D004A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bevallás ¦ Jellege (bev_jelleg)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001D005A"
+                  minOccurs="0"
+                  type="tns:Enum_26KATA_0A0001D005A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bevallás ¦ Típusa (bev_típus)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001D006A"
+                  minOccurs="0"
+                  type="tns:Enum_26KATA_0A0001D006A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Bevallás ¦ Kódja (bev_kód)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001D003A"
+                  minOccurs="0"
+                  type="tns:Enum_26KATA_0A0001D003A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Tételesadó-fizetési kötelezettséggel érintett hónapok száma (teteles_honapdb)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001E0001AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>NYILATKOZAT a kisadózó vállalkozó által elért bevételről ([FOLAP]A1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_26KATA_120074_Type">
+      <annotation>
+         <documentation>Bevallás a kisadózó vállalkozó 40 százalékos mértékű adójáról</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0B0001C0001AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>01. Kisadózó vállalkozóra vonatkozó bevételi értékhatár ([ADO]A1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0B0001C0002AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>02. Kisadózó vállalkozó által elért bevétel ([ADO]A2)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0B0001C0003AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>03. Százalékos adó alapja (02. - 01. sor különbözete) ([ADO]A3)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0B0001C0004AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>04. Százalékos adó összege (03. sorban szereplő összeg 40%-a) (Adónemkód: 288) ([ADO]A4)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_26KATA_120186_Type">
+      <annotation>
+         <documentation>Bevallás jellege</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0C0001C001A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jelölje, ha a bevallása ismételt önellenőrzésnek minősül (ismételt_önellenőrzés)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_26KATA_120149_Type">
+      <annotation>
+         <documentation>[ONELL] ÖNELLENŐRZÉSI MELLÉKLET</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0C0001D0001AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>01. Százalékos adó (Adónemkód: 288) ¦ Kötelezettség alapjának változása (±) (a) ([ONELL]A1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0C0001D0001BA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>01. Százalékos adó (Adónemkód: 288) ¦ Kötelezettség változása (±) (b) ([ONELL]B1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0C0001D0002BA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>02. Önellenőrzési pótlék (Adónemkód: 215) ¦ Kötelezettség változása (±) (b) ([ONELL]B2)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[0-9+-]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_26KATA_120189_Type">
+      <annotation>
+         <documentation>Egyenleg</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001A002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Befizetendő adó ¦ 40%-os mértékű befizetendő adó (Adónemkód: 288) (Egyenleg_288_befizetendo)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001A004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Befizetendő adó ¦ Önellenőrzési pótlék (Adónemkód: 215) (Egyenleg_215_befizetendo)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001A003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Visszaigényelhető adó ¦ 40%-os mértékű visszaigényelhető adó (Adónemkód: 288) (Egyenleg_288_visszaigenyelheto)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001A005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Visszaigényelhető adó ¦ Önellenőrzési pótlék (Adónemkód: 215) (Egyenleg_215_visszaigenyelheto)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+</schema>
